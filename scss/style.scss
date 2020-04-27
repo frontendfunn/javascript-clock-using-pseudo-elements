@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css?family=Sacramento");
+$mainColor: #ffffff;
+$background: #1098f7;
+
+$transition: ease-in-out;
+$trantitonTime: 0.5s;
+
+body {
+  background-color: $background;
+  font-family: "Sacramento", cursive;
+}
+.container {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 5rem;
+  margin: 0;
+  margin-bottom: 1rem;
+  color: $mainColor;
+}
+
+.clockContainer {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  .divider {
+    display: inline-flex;
+    width: 2rem;
+    height: 10rem;
+    position: relative;
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      height: 2rem;
+      width: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: $mainColor;
+      border-radius: 4px;
+    }
+    &::before {
+      top: 20%;
+    }
+    &::after {
+      bottom: 20%;
+    }
+  }
+}
+
+.digit {
+  height: 10rem;
+  width: 6rem;
+  background-color: $mainColor;
+  position: relative;
+  margin: 1rem;
+  border-radius: 2px;
+  overflow: hidden;
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    height: 2rem;
+    width: 2rem;
+    background-color: $background;
+    transition: all $transition $trantitonTime;
+  }
+  &::before {
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  &::after {
+    bottom: 20%;
+    right: 50%;
+    transform: translateX(50%);
+  }
+}
+
+.digit.one {
+  &::before {
+    top: 0;
+    height: 100%;
+    left: 0;
+    transform: translateX(0%);
+  }
+  &::after {
+    height: 100%;
+    bottom: 0;
+    right: 0;
+    transform: translateX(0%);
+  }
+}
+
+.digit.two {
+  &::before {
+    left: 0;
+    transform: translateX(0);
+    width: 4rem;
+  }
+  &::after {
+    right: 0;
+    transform: translateX(0);
+    width: 4rem;
+  }
+}
+
+.digit.three {
+  &::before {
+    left: 0;
+    transform: translateX(0);
+    width: 4rem;
+  }
+  &::after {
+    right: 100%;
+    transform: translateX(100%);
+    width: 4rem;
+  }
+}
+
+.digit.four {
+  &::before {
+    height: 4rem;
+    top: 0;
+  }
+  &::after {
+    bottom: 0;
+    right: 100%;
+    transform: translateX(100%);
+    height: 4rem;
+    width: 4rem;
+  }
+}
+
+.digit.five {
+  &::before {
+    width: 4rem;
+    left: 100%;
+    transform: translateX(-100%);
+  }
+  &::after {
+    width: 4rem;
+    right: 100%;
+    transform: translateX(100%);
+  }
+}
+
+.digit.six {
+  &::before {
+    width: 4rem;
+    left: 100%;
+    transform: translateX(-100%);
+  }
+}
+
+.digit.seven {
+  &::before {
+    height: 4rem;
+    width: 4rem;
+    left: 0;
+    transform: translateX(0);
+  }
+  &::after {
+    height: 4rem;
+    width: 4rem;
+    bottom: 0;
+    right: 100%;
+    transform: translateX(100%);
+  }
+}
+
+.digit.nine {
+  &::after {
+    width: 4rem;
+    right: 100%;
+    transform: translateX(100%);
+  }
+}
+
+.digit.zero {
+  &::before {
+    height: 3rem;
+  }
+  &::after {
+    height: 3rem;
+  }
+}

@@ -1,0 +1,221 @@
+@import url("https://fonts.googleapis.com/css?family=Sacramento");
+body {
+  background-color: #1098f7;
+  font-family: "Sacramento", cursive;
+}
+
+.container {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+h1 {
+  font-size: 5rem;
+  margin: 0;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.clockContainer {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.clockContainer .divider {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 2rem;
+  height: 10rem;
+  position: relative;
+}
+
+.clockContainer .divider::before, .clockContainer .divider::after {
+  content: "";
+  position: absolute;
+  height: 2rem;
+  width: 2rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-color: #ffffff;
+  border-radius: 4px;
+}
+
+.clockContainer .divider::before {
+  top: 20%;
+}
+
+.clockContainer .divider::after {
+  bottom: 20%;
+}
+
+.digit {
+  height: 10rem;
+  width: 6rem;
+  background-color: #ffffff;
+  position: relative;
+  margin: 1rem;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.digit::after, .digit::before {
+  content: "";
+  position: absolute;
+  height: 2rem;
+  width: 2rem;
+  background-color: #1098f7;
+  -webkit-transition: all ease-in-out 0.5s;
+  transition: all ease-in-out 0.5s;
+}
+
+.digit::before {
+  top: 20%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.digit::after {
+  bottom: 20%;
+  right: 50%;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+}
+
+.digit.one::before {
+  top: 0;
+  height: 100%;
+  left: 0;
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+.digit.one::after {
+  height: 100%;
+  bottom: 0;
+  right: 0;
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+.digit.two::before {
+  left: 0;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  width: 4rem;
+}
+
+.digit.two::after {
+  right: 0;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  width: 4rem;
+}
+
+.digit.three::before {
+  left: 0;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  width: 4rem;
+}
+
+.digit.three::after {
+  right: 100%;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  width: 4rem;
+}
+
+.digit.four::before {
+  height: 4rem;
+  top: 0;
+}
+
+.digit.four::after {
+  bottom: 0;
+  right: 100%;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  height: 4rem;
+  width: 4rem;
+}
+
+.digit.five::before {
+  width: 4rem;
+  left: 100%;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+.digit.five::after {
+  width: 4rem;
+  right: 100%;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+.digit.six::before {
+  width: 4rem;
+  left: 100%;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+.digit.seven::before {
+  height: 4rem;
+  width: 4rem;
+  left: 0;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.digit.seven::after {
+  height: 4rem;
+  width: 4rem;
+  bottom: 0;
+  right: 100%;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+.digit.nine::after {
+  width: 4rem;
+  right: 100%;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+.digit.zero::before {
+  height: 3rem;
+}
+
+.digit.zero::after {
+  height: 3rem;
+}
+/*# sourceMappingURL=style.css.map */
