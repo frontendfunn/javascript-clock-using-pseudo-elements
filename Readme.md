@@ -1,6 +1,6 @@
 # 😄 Javascript Clock using Pseudo Elements
 
-## 😃 Click here for the 👉 [💥LIVE DEMO]()
+## 😃 Click here for the 👉 [💥LIVE DEMO](https://frontendfunn.github.io/javascript-clock-using-pseudo-elements/)
 
 ---
 
